@@ -56,7 +56,6 @@ const Testimonial = () => {
             <h2 className="font-poppins font-bold text-3xl md:text-[50px] leading-[120%] mb-8 md:text-left text-center">Customer <span className='text-red-800'>Feedback</span></h2>
 
             <div className="flex flex-col md:flex-row gap-8">
-                {/* Left Side - Slider for Customer Details */}
                 <div className="w-full md:w-[55%]">
                     <Slider {...settings}>
                         {testimonials.map((testimonial) => (
@@ -89,7 +88,6 @@ const Testimonial = () => {
                     </Slider>
                 </div>
 
-                {/* Right Side - Fixed Product Image */}
                 <div className="w-full md:w-[45%] h-[400px] relative">
                     <div className="w-full h-full max-w-[400px] mx-auto md:mx-0  rounded-lg overflow-hidden ">
                         {/* Vector effect container */}
@@ -106,7 +104,6 @@ const Testimonial = () => {
                     </div>
                 </div>
 
-                {/* Add this to your global CSS or CSS module */}
                 <style jsx global>{`
   .clip-path-vector {
     clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);

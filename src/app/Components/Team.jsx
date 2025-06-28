@@ -2,6 +2,9 @@
 import React from 'react';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import Team1 from '../assets/images/team.jpg'
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 // Dynamically import Slider with SSR disabled
 const Slider = dynamic(() => import('react-slick'), {
@@ -9,12 +12,7 @@ const Slider = dynamic(() => import('react-slick'), {
   loading: () => <div className="text-center p-4">Loading team...</div>
 });
 
-// Import team member images
-import Team1 from '../assets/images/team.jpg'
 
-// Import required CSS
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 export default function Team() {
   const teamMembers = [

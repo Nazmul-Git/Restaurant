@@ -5,7 +5,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-// Import your partner logos
+// Import logo
 import Partner1 from '../assets/images/partner1.png'
 import Partner2 from '../assets/images/partner2.png'
 import Partner3 from '../assets/images/partner3.png'
@@ -27,15 +27,15 @@ export default function Partner() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 5000, // Animation speed
+    speed: 5000,
     autoplay: true,
-    autoplaySpeed: 0, // Continuous scrolling
+    autoplaySpeed: 0, 
     cssEase: 'linear',
     slidesToShow: 5,
     slidesToScroll: 1,
     arrows: false,
     pauseOnHover: true,
-    rtl: true, // Right-to-left direction (creates left-to-right visual)
+    rtl: true, 
     responsive: [
       {
         breakpoint: 1024,
@@ -46,13 +46,13 @@ export default function Partner() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3, // Exactly 3 on mobile
+          slidesToShow: 3, 
         }
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
         }
       }
     ]

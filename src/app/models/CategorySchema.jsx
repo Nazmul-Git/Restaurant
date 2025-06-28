@@ -26,6 +26,5 @@ const categorySchema = new mongoose.Schema({
 });
 
 
-// Model export pattern that prevents OverwriteModelError
 const Category = mongoose.models.categories || mongoose.model('categories', categorySchema);
 export default Category;

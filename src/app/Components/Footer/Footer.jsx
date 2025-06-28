@@ -9,9 +9,8 @@ import {
   FaClock,
   FaLocationArrow
 } from "react-icons/fa";
+import Image from 'next/image';
 
-// Make sure these paths are correct relative to your component
-// If images are in the same directory as the component, use:
 import foodImage1 from '../../assets/images/footer1.jpg';
 import foodImage2 from '../../assets/images/footer2.jpg';
 import foodImage3 from '../../assets/images/footer3.jpg';
@@ -20,7 +19,6 @@ import foodImage5 from '../../assets/images/footer5.jpg';
 import foodImage6 from '../../assets/images/footer6.jpg';
 
 export default function Footer() {
-  // Instagram gallery images
   const instagramImages = [
     foodImage1,
     foodImage2,
@@ -97,17 +95,19 @@ export default function Footer() {
           </nav>
         </div>
 
-        {/* Instagram Gallery Section */}
-        <div>
+        {/* Instagram Gallery */}
+        <div className="hidden md:block">
           <h2 className="text-xl font-bold mb-4">Instagram Gallery</h2>
           <div className="grid grid-cols-3 gap-2">
             {instagramImages.map((image, index) => (
               <div key={index} className="w-full aspect-square bg-white rounded overflow-hidden">
-                <img
+                <Image
                   src={image}
                   alt={`Food ${index + 1}`}
                   className="w-full h-full object-cover hover:opacity-80 transition-opacity"
-                  loading="lazy"
+                  width={100}
+                  height={100}
+                  placeholder="blur"
                 />
               </div>
             ))}
@@ -115,7 +115,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Copyright */}
       <div className="max-w-7xl mx-auto text-center text-sm mt-10 border-t border-white/20 pt-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p>Copyright © {new Date().getFullYear()}. All rights reserved</p>

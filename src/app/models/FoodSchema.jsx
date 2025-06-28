@@ -34,6 +34,5 @@ const foodSchema = new mongoose.Schema({
   timestamps: true
 });
 
-// Prevent OverwriteModelError
 const Food = mongoose.models.foods || mongoose.model('foods', foodSchema);
 export default Food;
